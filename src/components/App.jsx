@@ -42,13 +42,33 @@ class App extends Component {
   render() {
     return (
       <>
-        <Navbar totalCount={this.getTotalCount()} />
-        <Counters
-          count={this.state.count}
-          onDelete={this.handleDelete}
-          onClicked={this.handleClick}
-          onReset={this.handleReset}
-        />
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-sm order-2 first align-self-end">
+              <Navbar totalCount={this.getTotalCount()} />
+              <Counters
+                count={this.state.count}
+                onDelete={this.handleDelete}
+                onClicked={this.handleClick}
+                onReset={this.handleReset}
+              />
+            </div>
+            <div className="col-sm order-1 ">
+              <h5>React-Counter-app</h5>
+              <p>
+                This is a simple react app. It demonstrates some of the key
+                concepts in react
+              </p>
+              <ul>
+                <li>Components, Props, state</li>
+                <li>Passing props to components</li>
+                <li>Lifting the state up</li>
+                <li>Handling events i.e DOM events</li>
+              </ul>
+              <p>Visit <a href="https://github.com/zack-oss/react-counter">github.com</a> for the source code</p>
+            </div>
+          </div>
+        </div>
       </>
     );
   }
